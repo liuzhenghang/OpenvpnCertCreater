@@ -9,7 +9,7 @@ Usage: generate-openvpn.sh --endpoint <proto://host:port> --client <name> [optio
 Options
   --endpoint <value>     Value passed to ovpn_genconfig -u (e.g. udp://vpn.example.com:1194)
   --client <value>       Client/Common Name for the certificate
-  --image <name>         Docker image to use (default: ghcr.io/kylemanna/docker-openvpn:2.6)
+  --image <name>         Docker image to use (default: kylemanna/openvpn)
   --rebuild-ca           Wipe and recreate the entire PKI before issuing the client certificate
   --archive-pki          Produce a tar.gz snapshot of the full PKI directory
   --workdir <path>       Override working directory (defaults to \$PWD)
@@ -34,7 +34,7 @@ require_cmd() {
 
 VPN_ENDPOINT=""
 CLIENT_NAME=""
-DOCKER_IMAGE="${DOCKER_IMAGE:-ghcr.io/kylemanna/docker-openvpn:2.6}"
+DOCKER_IMAGE="${DOCKER_IMAGE:-kylemanna/openvpn}"
 REBUILD_CA=false
 ARCHIVE_PKI=false
 WORK_DIR="${WORK_DIR:-$PWD}"

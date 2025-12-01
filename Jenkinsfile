@@ -30,7 +30,7 @@ pipeline {
   }
 
   environment {
-    DOCKER_IMAGE = 'ghcr.io/kylemanna/docker-openvpn:2.6'
+    DOCKER_IMAGE = 'kylemanna/openvpn'
   }
 
   stages {
